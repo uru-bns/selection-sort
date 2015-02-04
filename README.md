@@ -1,4 +1,6 @@
-ession
+昇順の場合
+
+```sell-session
 php selection-sort.php 10,8,1,4,5,-1 a
 ```
 
