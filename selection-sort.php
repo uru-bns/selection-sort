@@ -3,13 +3,13 @@
 $data = explode(',', $argv[1]);
 $order_by_ascending = strtolower($argv[2]) == 'a' ? true : false;
 
-$data = [8, 10, -1, 1, 5, 9];
+$data_test = [8, 10, -1, 1, 5, 9];
 $data_a = [-1, 1, 5, 8, 9, 10];
 $data_d = [10, 9, 8, 5, 1, -1];
-var_dump(empty(array_diff($data_a, selection_sort($data, true))));
-var_dump(empty(array_diff($data_a, selection_sort2($data, true))));
-var_dump(empty(array_diff($data_d, selection_sort($data, false))));
-var_dump(empty(array_diff($data_d, selection_sort2($data, false))));
+var_dump(empty(array_diff($data_a, selection_sort($data_test, true))));
+var_dump(empty(array_diff($data_a, selection_sort2($data_test, true))));
+var_dump(empty(array_diff($data_d, selection_sort($data_test, false))));
+var_dump(empty(array_diff($data_d, selection_sort2($data_test, false))));
 
 print_r(selection_sort($data, $order_by_ascending));
 print_r(selection_sort2($data, $order_by_ascending));
